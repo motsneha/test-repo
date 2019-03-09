@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e1cf-fedf-8000-9ba2-011c48011c48_8784251</versionUuid>
+    <decision>
+        <name>VM_DetermineVehicleModelList</name>
+        <uuid>28e84ce8-4ff8-4760-88b1-cf8245fef472</uuid>
+        <description>given a vehicle make determine which vehicle models are available for selection.  Helper decision for cascading dropdown menus. </description>
+        <parentUuid>_a-0000e048-6fbd-8000-9ba2-011c48011c48_5612998</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!override_exception_appian_internal(fn!with(local!decisiondefinition: a!decisiondesigner_cache(uuid: "28e84ce8-4ff8-4760-88b1-cf8245fef472",versionKey: "5f483823-b226-4696-9b40-acda0b9d9b5c",value: #"SYSTEM_SYSRULES_dd_dd"('hitPolicy': #"SYSTEM_SYSRULES_dd_dhp"("UNIQUE"), 'inputs': {#"SYSTEM_SYSRULES_dd_di"('name': "vehicleMake", 'type': 'type!{http://www.appian.com/ae/types/2009}Text', 'id': 1, 'restrictionType': #"SYSTEM_SYSRULES_dd_dirt"("LOOKUP"), 'restriction': #"SYSTEM_SYSRULES_dd_dirl"('allowedLabels': {"Ford", "Mazda", "Infiniti", "Mercedes"}, 'allowedValues': {"Ford", "Mazda", "Infiniti", "Mercedes"}))}, 'outputs': {#"SYSTEM_SYSRULES_dd_do"('id': 1, 'name': "vehicleModel", 'type': 'type!{http://www.appian.com/ae/types/2009}Text', 'restrictionType': #"SYSTEM_SYSRULES_dd_dort"("LOOKUP"), 'restriction': #"SYSTEM_SYSRULES_dd_dorl"('allowedLabels': {"Fusion", "Escape", "F-150", "CX-5", "Mazda5", "Mazda6", "QX30", "QX50", "QX80", "C-Class", "S-Class", "E-Class"}, 'allowedValues': {"Fusion", "Escape", "F-150", "CX-5", "Mazda5", "Mazda6", "QX30", "QX50", "QX80", "C-Class", "S-Class", "E-Class"}), 'returnListType': true)}, 'rules': {#"SYSTEM_SYSRULES_dd_dr"('id': 1, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 1, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("IN"), 'value1': {"Ford"}))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 1, 'decisionOutputId': 1, 'value': {"Fusion", "Escape", "F-150"})}), #"SYSTEM_SYSRULES_dd_dr"('id': 2, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 3, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("IN"), 'value1': {"Mazda"}))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 2, 'decisionOutputId': 1, 'value': {"CX-5", "Mazda5", "Mazda6"})}), #"SYSTEM_SYSRULES_dd_dr"('id': 3, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 5, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("IN"), 'value1': {"Infiniti"}))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 3, 'decisionOutputId': 1, 'value': {"QX30", "QX50", "QX80"})}), #"SYSTEM_SYSRULES_dd_dr"('id': 4, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 7, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("IN"), 'value1': {"Mercedes"}))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 4, 'decisionOutputId': 1, 'value': {"C-Class", "S-Class", "E-Class"})})}, 'isUnique': true, 'defaultOutputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 1, 'decisionOutputId': 1, 'value': {})})),#"SYSTEM_SYSRULES_dd_exr"(decisionDefinition:local!decisiondefinition,executionInputs:{#"SYSTEM_SYSRULES_dd_dei"(decisionInputId:1,value:'ri!vehicleMake')})))</definition>
+        <namedTypedValue>
+            <name>vehicleMake</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <inputMetadataList>
+            <inputMetadata>
+                <inputId>1</inputId>
+                <nameRef>vehicleMake</nameRef>
+                <allowedLabelsExpr>#"_a-0000e064-3a5e-8000-9ba2-011c48011c48_6120699"</allowedLabelsExpr>
+                <allowedValuesExpr>#"_a-0000e064-3a5e-8000-9ba2-011c48011c48_6120699"</allowedValuesExpr>
+            </inputMetadata>
+        </inputMetadataList>
+        <outputMetadataList>
+            <outputMetadata>
+                <outputId>1</outputId>
+                <nameRef>vehicleModel</nameRef>
+                <allowedLabelsExpr>#"_a-0000e064-3a5e-8000-9ba2-011c48011c48_6120715"</allowedLabelsExpr>
+                <allowedValuesExpr>#"_a-0000e064-3a5e-8000-9ba2-011c48011c48_6120715"</allowedValuesExpr>
+                <typeName>{http://www.appian.com/ae/types/2009}Text?list</typeName>
+            </outputMetadata>
+        </outputMetadataList>
+        <hitPolicy>UNIQUE</hitPolicy>
+    </decision>
+    <roleMap public="true">
+        <role inherit="false" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+                <groupUuid>_e-0000e094-daf5-8000-9aee-01075c01075c_442</groupUuid>
+            </groups>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e064-3a5e-8000-9ba2-011c48011c48_6120726"/>
+        <historyInfo versionUuid="_a-0000e1cf-fedf-8000-9ba2-011c48011c48_8784251"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e1cf-fedf-8000-9ba2-011c48011c48_8784249</versionUuid>
+    <constant>
+        <name>VM_VEHICLE_MODEL_LIST</name>
+        <uuid>_a-0000e064-3a5e-8000-9ba2-011c48011c48_6120715</uuid>
+        <description>list of vehicle models that can be maintenanced</description>
+        <parentUuid>_a-0000e048-6fbd-8000-9ba2-011c48011c48_5612998</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>Text?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>Fusion</el>
+                <el>Escape</el>
+                <el>F-150</el>
+                <el>CX-5</el>
+                <el>Mazda5</el>
+                <el>Mazda6</el>
+                <el>QX30</el>
+                <el>QX50</el>
+                <el>QX80</el>
+                <el>C-Class</el>
+                <el>S-Class</el>
+                <el>E-Class</el>
+            </value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="false" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+                <groupUuid>_e-0000e094-daf5-8000-9aee-01075c01075c_442</groupUuid>
+            </groups>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e064-3a5e-8000-9ba2-011c48011c48_6120719"/>
+        <historyInfo versionUuid="_a-0000e1cf-fedf-8000-9ba2-011c48011c48_8784249"/>
+    </history>
+</contentHaul>

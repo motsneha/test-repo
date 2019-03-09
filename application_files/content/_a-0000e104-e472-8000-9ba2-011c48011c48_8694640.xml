@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e1cf-fedf-8000-9ba2-011c48011c48_8784247</versionUuid>
+    <rulesFolder>
+        <name>VM Query Rules</name>
+        <uuid>_a-0000e104-e472-8000-9ba2-011c48011c48_8694640</uuid>
+        <description>stores all query rules for the VM app</description>
+        <parentUuid>_a-0000e064-39f0-8000-9ba2-011c48011c48_177127</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+    </rulesFolder>
+    <roleMap public="true">
+        <role inherit="false" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+                <groupUuid>_e-0000e094-daf5-8000-9aee-01075c01075c_440</groupUuid>
+            </groups>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e104-e472-8000-9ba2-011c48011c48_8694644"/>
+        <historyInfo versionUuid="_a-0000e1cf-fedf-8000-9ba2-011c48011c48_8784247"/>
+    </history>
+</contentHaul>
